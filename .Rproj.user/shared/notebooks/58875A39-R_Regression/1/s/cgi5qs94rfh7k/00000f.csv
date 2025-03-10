@@ -1,0 +1,67 @@
+"0","# Quick lme4 check of AIC"
+"0","# Check Full Model "
+"0","byUsed = lmer(Pull~Pinch*used*Person + (1|Daydisc) + (1|Daydisc:Day_Order),"
+"0","              data = chalk,"
+"0","              REML = FALSE)"
+"0",""
+"0","noDate = lm(Pull~Pinch*used*Person ,data=chalk)"
+"0",""
+"0","# Compare AIC"
+"0","AIC(noDate)"
+"1","[1]"
+"1"," 3582.493"
+"1","
+"
+"0","AIC(byUsed)"
+"1","[1]"
+"1"," 3308.859"
+"1","
+"
+"0","delta = AIC(byUsed) - AIC(noDate)"
+"0","delta"
+"1","[1]"
+"1"," -273.6338"
+"1","
+"
+"0","# Delta AIC is very Large, so date is significant"
+"0",""
+"0","# Heteroscedasticity"
+"0","####################"
+"0","####################"
+"0","####################"
+"0","####################"
+"0","fig = plot_ly("
+"0","  x = chalk$Pull,"
+"0","  y = residuals(byUsed)"
+"0",") "
+"0",""
+"0","fig <- fig %>% layout(title = ""Residuals by Pull"","
+"0","                      xaxis = list(title=""Pull""),"
+"0","                      yxis = list(""Residuals"")"
+"0","                      )"
+"0",""
+"0","fig"
+"2","No trace type specified:
+  Based on info supplied, a 'scatter' trace seems appropriate.
+  Read more about this trace type -> https://plotly.com/r/reference/#scatter
+"
+"2","No scatter mode specifed:
+  Setting the mode to markers
+  Read more about this attribute -> https://plotly.com/r/reference/#scatter-mode
+"
+"2","Warning: 'layout' objects don't have these attributes: 'yxis'
+Valid attributes include:
+'_deprecated', 'activeshape', 'annotations', 'autosize', 'autotypenumbers', 'calendar', 'clickmode', 'coloraxis', 'colorscale', 'colorway', 'computed', 'datarevision', 'dragmode', 'editrevision', 'editType', 'font', 'geo', 'grid', 'height', 'hidesources', 'hoverdistance', 'hoverlabel', 'hovermode', 'images', 'legend', 'mapbox', 'margin', 'meta', 'metasrc', 'modebar', 'newshape', 'paper_bgcolor', 'plot_bgcolor', 'polar', 'scene', 'selectdirection', 'selectionrevision', 'separators', 'shapes', 'showlegend', 'sliders', 'smith', 'spikedistance', 'template', 'ternary', 'title', 'transition', 'uirevision', 'uniformtext', 'updatemenus', 'width', 'xaxis', 'yaxis', 'barmode', 'bargap', 'mapType'
+"
+"2","No trace type specified:
+  Based on info supplied, a 'scatter' trace seems appropriate.
+  Read more about this trace type -> https://plotly.com/r/reference/#scatter
+"
+"2","No scatter mode specifed:
+  Setting the mode to markers
+  Read more about this attribute -> https://plotly.com/r/reference/#scatter-mode
+"
+"2","Warning: 'layout' objects don't have these attributes: 'yxis'
+Valid attributes include:
+'_deprecated', 'activeshape', 'annotations', 'autosize', 'autotypenumbers', 'calendar', 'clickmode', 'coloraxis', 'colorscale', 'colorway', 'computed', 'datarevision', 'dragmode', 'editrevision', 'editType', 'font', 'geo', 'grid', 'height', 'hidesources', 'hoverdistance', 'hoverlabel', 'hovermode', 'images', 'legend', 'mapbox', 'margin', 'meta', 'metasrc', 'modebar', 'newshape', 'paper_bgcolor', 'plot_bgcolor', 'polar', 'scene', 'selectdirection', 'selectionrevision', 'separators', 'shapes', 'showlegend', 'sliders', 'smith', 'spikedistance', 'template', 'ternary', 'title', 'transition', 'uirevision', 'uniformtext', 'updatemenus', 'width', 'xaxis', 'yaxis', 'barmode', 'bargap', 'mapType'
+"

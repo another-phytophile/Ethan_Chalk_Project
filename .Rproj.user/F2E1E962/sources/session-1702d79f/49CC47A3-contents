@@ -1,0 +1,5 @@
+IRkernel::installspec(user = TRUE)
+?installspec
+Sys.setenv(JUPYTER_BIN="C:\\Users\\yujer\\anaconda3\\envs\\main\\Scripts\\jupyter.exe")
+IRkernel::installspec(user = TRUE)
+install.packages("tidyverse")

@@ -1,0 +1,5 @@
+"0","test = glmer(Pull~Pinch*used*Person + (1|Daydisc) + (1|Daydisc:Day_Order),
+              data = chalk,
+             family = Gamma(link=""log""))
+"
+"2","Warning: Model failed to converge with max|grad| = 0.129329 (tol = 0.002, component 1)"
