@@ -1,0 +1,5 @@
+install.packages("pbkrtest")
+install.packages("bootMer")
+install.packages("sommer")
+library(emmeans)
+?emmeans
