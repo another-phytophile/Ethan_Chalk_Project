@@ -1,2 +1,4 @@
-# Ignore R project files
+# Ignore rproj folder
 .Rproj.user/
+# Ignore vscode settings
+.vscode/

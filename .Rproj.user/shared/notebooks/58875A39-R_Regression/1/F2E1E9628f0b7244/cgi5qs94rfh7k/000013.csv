@@ -1,3 +1,0 @@
-"0",""
-"0","# Add a Q-Q line to the plot with specific color and line width"
-"0","qqline(residuals(byUsed), col = ""turquoise"", lwd = 2)"
