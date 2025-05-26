@@ -1,2 +1,2 @@
-
-Data/
+# Ignore R project files
+.Rproj.user/
